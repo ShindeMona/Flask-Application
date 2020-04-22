@@ -1,0 +1,17 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}App{% endblock %}
+{% block body %}
+ <body background="{{ url_for('static', filename='img.jpg') }}"> 
+ {% block content %}
+<div class="container">
+<div class="page-header">
+ {% for val in data %}
+  <ul style ="background-color: white">
+    <li> {{ val[0] }} </li>
+   </ul>
+ {% endfor %}
+</ul>
+</div>
+</div>
+{% endblock %}
+{% endblock %}
