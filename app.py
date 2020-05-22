@@ -14,7 +14,7 @@ app.config['SECRET_KEY'] = 'hard to guess string'
 bootstrap=Bootstrap(app)
 @app.route('/')
 def use():
-   return render_template('sample.html',current_time=datetime.utcnow())
+   return redirect('https://www.google.com/')
 
 @app.route('/user/<name>')
 def user(name):
@@ -28,8 +28,8 @@ def page_not_found(e):
 def internal_server_error(e):
     return render_template('500.html'),500
 import yaml
-
-# data configuration
+import re
+# database configuration
 db=yaml.load(open('db.yaml'))
 app.config['MYSQL_HOST']= db['mysql_host']
 app.config['MYSQL_USER']= db['mysql_user']
@@ -46,9 +46,13 @@ def index():
         cur.execute("INSERT INTO search(search2) VALUES(%s)",(search2,))
         mysql.connection.commit()
         cur.close()
-        return redirect('/search')
+       # return redirect('/search')
+        if(re.match('covid',search2,re.IGNORECASE)):
+           return redirect('https://covid19.who.int/')
+        else:
+           return render_template('404.html')
       return render_template('demo.html')
-
+           
 @app.route('/search')
 def search():
        cur= mysql.connection.cursor()
@@ -58,3 +62,6 @@ def search():
            return render_template('search.html',data=data)
 if __name__ == '__main__':
      app.run(debug=True)
+
+
+
