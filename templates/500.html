@@ -1,7 +1,10 @@
 {% extends "base1.html" %}
-{% block title %} Server Error {% endblock %}
-{% block page_content %}
-<div class ="page_header" >
-  <h1>500 server error</h1>
+{% block title %} Flasky -Server Error {% endblock %}
+{% block body %}
+   <body background="{{ url_for('static',filename='img.jpg'}}">
+{% block content %}
+<div class ="container" >
+ <center><b><i>500 server error</i></b></center>
 </div>
+{% endblock %}
 {% endblock %}
