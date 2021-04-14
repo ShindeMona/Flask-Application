@@ -1,5 +1,5 @@
 # " Flask-Application "
-# need to open virtual python so use following command for that
+## Need to open virtual python so use following command for that
 ### source  venv/bin/activate
 ## Go to venv directory and run following command
 ### sudo python3 app.py
