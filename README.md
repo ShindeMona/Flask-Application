@@ -1,5 +1,5 @@
 # " Flask-Application "
-## TheFollowing are dependancies need to install in your machine.So use below command 
+## TheFollowing are dependancies need to install in your machine.So use below commands
 
 ### sudo apt-get install python3-virtualenv
 ### virtualenv --version
