@@ -21,7 +21,7 @@
 ### pip install mysqlclient
 ### pip install flask-mysqldb
 
-### \n pip install pyyaml
+### pip install pyyaml
 
 ## Need to open virtual python so use following command for that
 ### source  venv/bin/activate
