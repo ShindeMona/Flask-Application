@@ -14,14 +14,14 @@
 ### pip install -U Werkzeug==2.0.0
 
 ### pip install flask-mysqldb
-## if mysql is hitting error try following  4 command
+## if mysql is hitting error try following  4 commands only
 
 ### sudo apt-get install python3-dev
 ### sudo apt-get install libmysqlclient-dev
 ### pip install mysqlclient
 ### pip install flask-mysqldb
 
-### pip install pyyaml
+### \n pip install pyyaml
 
 ## Need to open virtual python so use following command for that
 ### source  venv/bin/activate
